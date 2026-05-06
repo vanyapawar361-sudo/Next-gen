@@ -1,0 +1,4 @@
+{
+  "ignore": ["db.json", "frontend/*", "node_modules/*"],
+  "ext": "js,json"
+}
