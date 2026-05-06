@@ -25,7 +25,7 @@ function App() {
   const fetchStats = async () => {
     try {
       setStatsLoading(true);
-      const res = await fetch('http://localhost:3000/api/admin/stats', {
+      const res = await fetch('https://next-gen-lb2i.onrender.com/api/admin/stats', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();
@@ -51,7 +51,7 @@ function App() {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/${id}`, {
+      const res = await fetch(`https://next-gen-lb2i.onrender.com/api/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -102,7 +102,7 @@ function App() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:3000/auth/login', {
+      const res = await fetch('https://next-gen-lb2i.onrender.com/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
@@ -132,7 +132,7 @@ function App() {
 
   const fetchDocuments = async () => {
     try {
-      const res = await fetch('http://localhost:3000/api', {
+      const res = await fetch('https://next-gen-lb2i.onrender.com/api', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (res.status === 401) return handleLogout();
@@ -154,7 +154,7 @@ function App() {
 
     try {
       setLoading(true);
-      const res = await fetch('http://localhost:3000/api/upload', {
+      const res = await fetch('https://next-gen-lb2i.onrender.com/api/upload', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` },
         body: formData
@@ -185,7 +185,7 @@ function App() {
   const handleShare = async (docId) => {
     if (!sharePasswordVal) return alert('Enter a password');
     try {
-      const res = await fetch('http://localhost:3000/api/share', {
+      const res = await fetch('https://next-gen-lb2i.onrender.com/api/share', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -204,7 +204,7 @@ function App() {
   const handleAccess = async () => {
     if (!accessPasswordVal) return;
     try {
-      const res = await fetch('http://localhost:3000/api/access', {
+      const res = await fetch('https://next-gen-lb2i.onrender.com/api/access', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -234,7 +234,7 @@ function App() {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:3000/api/ask', {
+      const res = await fetch('https://next-gen-lb2i.onrender.com/api/ask', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
