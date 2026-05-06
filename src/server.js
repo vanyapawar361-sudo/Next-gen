@@ -38,7 +38,6 @@ app.get('/health', (req, res) => {
 if (require.main === module) {
   app.listen(config.PORT, () => {
     console.log(`Server starting on port ${config.PORT}`);
-    console.log(`Environment config: Redis at ${config.REDIS_URL}`);
   });
 }
 
