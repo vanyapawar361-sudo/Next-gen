@@ -50,3 +50,5 @@ Ask questions against your document in any target language!
   "language": "Hindi"
 }
 ```
+Live link:
+https://next-38abeu0t7-vanyas-projects-a1a9d96c.vercel.app/
