@@ -6,7 +6,22 @@ const dbPath = path.join(__dirname, '../../db.json');
 // Initialize DB file if not exists
 async function initDb() {
   const defaultDb = { 
-    users: [], 
+    users: [
+      {
+        id: "user-admin-01",
+        username: "admin",
+        password: "$2b$10$qAqsmCekNhGFxsV/DXFFe.YfOX3I9CAMnOWXc2B0bPOCzzcJ2jKUm",
+        role: "Admin",
+        department: "IT"
+      },
+      {
+        id: "user-emp-01",
+        username: "employee1",
+        password: "$2b$10$r0KrG7Ktt.Mm83Gh5k7QVuis6jX5HddKsVfElLEa8DF0w4nKPBkyW",
+        role: "Employee",
+        department: "HR"
+      }
+    ], 
     documents: [], 
     chunks: [], 
     summaries: [], 
